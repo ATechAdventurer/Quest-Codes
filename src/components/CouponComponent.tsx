@@ -19,7 +19,7 @@ export default function CouponComponent({ coupons }: CouponComponentProps) {
     const toastCopy = (redirecting: boolean = false) => {
         const toastId = toast.success(`Coupon code copied to clipboard!${redirecting ? " Redirecting..." : ""}`, {
             position: "top-right",
-            autoClose: 3000,
+            autoClose: 900,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
