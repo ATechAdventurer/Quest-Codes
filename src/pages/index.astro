@@ -1,0 +1,19 @@
+---
+import "@/styles/globals.css";
+
+import CouponComponent from "../components/CouponComponent";
+// import type Coupon from "@/types/Coupon";
+import couponData from "../data/coupons.json";
+import { CouponsSchema } from "@/schemas/Coupon.schema";
+const coupons = CouponsSchema.parse(couponData);
+---
+
+<html>
+  <head>
+    <title>Coupon Codes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <CouponComponent coupons={coupons} client:load />
+  </body>
+</html>
