@@ -2,8 +2,9 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import type { Coupon } from "@/schemas/Coupon.schema";
+import { useStickyState } from "@/hooks/stickyState";
 
 interface CouponComponentProps {
     coupons: Coupon[];
@@ -15,7 +16,8 @@ function isMobile() {
 }
 
 export default function CouponComponent({ coupons }: CouponComponentProps) {
-    const [toasts, setToasts] = useState<(number | string)[]>([]);
+    const [redeemed, setRedeemed] = useStickyState<string[]>([], "redeemed");
+    const [showHidden, setShowHidden] = useState(false);
     const toastCopy = (redirecting: boolean = false) => {
         const toastId = toast.success(`Coupon code copied to clipboard!${redirecting ? " Redirecting..." : ""}`, {
             position: "top-right",
@@ -27,18 +29,16 @@ export default function CouponComponent({ coupons }: CouponComponentProps) {
             progress: undefined,
             theme: "colored",
         });
-        setToasts([...toasts, toastId]);
     }
     const handleCopyAndRedirect = async (code: string, productId: string) => {
         let uri = `https://www.oculus.com/experiences/app/${productId}`;
         if (isMobile()) {
             uri = `oculus.store://link/products?item_id=${productId}`;
         }
-
         await navigator.clipboard.writeText(code);
         toastCopy(true);
-
         await new Promise((resolve) => setTimeout(resolve, 1200));
+        setRedeemed([...redeemed, productId]);
         window.location.href = uri;
     };
 
@@ -52,15 +52,40 @@ export default function CouponComponent({ coupons }: CouponComponentProps) {
             <header className="w-full max-w-4xl px-4 py-2">
                 <h1 className="text-3xl font-bold mb-4 text-center">Quest Codes</h1>
                 <p className="text text-center"><b>Note:</b> If you are on mobile make sure you have the Meta Quest App installed</p>
+                <br />
+                {/* <p className="text text-center">{redeemed.length} Games already redeemed</p> <Button>Show</Button> */}
+                <div className="flex flex-row justify-center items-center">
+                    <p className="mr-2">{redeemed.length} Games redeemed</p>
+                    <Button className="mr-2" onClick={() => {
+                        setShowHidden(!showHidden);
+                    }}>{showHidden ? "Hide" : "Show"}</Button>
+                    <Button className="mr-2" onClick={() => {
+                        setRedeemed([]);
+                    }}>Clear</Button>
+                </div>
             </header>
             <main className="w-full max-w-4xl px-4 py-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
-                {coupons.map((coupon, index) => {
+
+                {coupons.filter(
+                    (coupon) => showHidden || !redeemed.includes(coupon.productId)
+                ).map((coupon, index) => {
                     return (
                         <Card key={index} className="bg-card text-card-foreground rounded-lg shadow-lg">
                             <div className="flex flex-col">
                                 <div className="flex flex-col justify-between h-full p-4">
                                     <div>
-                                        <h2 className="text-xl font-bold mb-2">{coupon.name}</h2>
+                                        <div className="flex flex-row">
+                                            <h2 className="text-xl font-bold mb-2">{coupon.name}</h2>
+                                            <Button
+                                                variant="ghost"
+                                                size="icon"
+                                                className="text-muted-foreground hover:text-primary ml-auto"
+                                                onClick={() => {
+                                                    setRedeemed([...redeemed, coupon.productId]);
+                                                }}>
+                                                <HideIcon />
+                                            </Button>
+                                        </div>
                                         <p className="text-muted-foreground mb-2">
                                             <span
                                                 className={`px-2 py-1 rounded-md ${coupon.discount >= 50
@@ -93,7 +118,6 @@ export default function CouponComponent({ coupons }: CouponComponentProps) {
                                             size="icon"
                                             className="text-muted-foreground hover:text-primary"
                                             onClick={() => handleCopyAndRedirect(coupon.code, coupon.productId)}
-                                        // onTouchStart={() => handleCopyAndRedirect(coupon.code, coupon.productId)}
                                         >
                                             <MetaIcon className="w-4 h-4" />
                                             <span className="sr-only">Add to cart</span>
@@ -124,6 +148,48 @@ function MetaIcon(props: React.SVGProps<SVGSVGElement>) {
         </svg>
     )
 }
+
+function HideIcon(props: React.SVGProps<SVGSVGElement>) {
+    return (
+        <svg
+            {...props}
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        >
+            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+            <circle cx="12" cy="12" r="3" />
+            <path d="M22 2 2 22" />
+        </svg>
+    )
+}
+
+function ShowIcon(props: React.SVGProps<SVGSVGElement>) {
+    return (
+        <svg
+            {...props}
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        >
+            <circle cx="12" cy="12" r="3" />
+            <path d="M22 12c0 1.1-.9 2-2 2h-2v4h-4v2h-4v-2H6v-4H4c-1.1 0-2-.9-2-2s.9-2 2-2h2V6h4V4h4v2h4v4h2c1.1 0 2 .9 2 2z" />
+        </svg>
+    );
+}
+
 
 function FileWarningIcon(props: React.SVGProps<SVGSVGElement>) {
     return (
