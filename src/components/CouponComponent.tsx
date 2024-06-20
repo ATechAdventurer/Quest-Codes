@@ -49,8 +49,9 @@ export default function CouponComponent({ coupons }: CouponComponentProps) {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground">
-            <header className="w-full max-w-4xl px-4 py-8">
+            <header className="w-full max-w-4xl px-4 py-4">
                 <h1 className="text-3xl font-bold mb-4 text-center">Quest Codes</h1>
+                <p className="text text-center"><b>Note:</b> If you are on mobile make sure you have the Meta Quest App installed</p>
             </header>
             <main className="w-full max-w-4xl px-4 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
                 {coupons.map((coupon, index) => {
