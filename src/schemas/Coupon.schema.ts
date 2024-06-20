@@ -5,10 +5,12 @@ export const CouponSchema = z.object({
   discount: z.number(),
   originalPrice: z.number(),
   code: z.string(),
-  link: z.string().url(),
+  productId: z.string(),
   image: z.string(),
 });
 
 export const CouponsSchema = z.array(CouponSchema);
 
 export type Coupon = z.infer<typeof CouponSchema>;
+
+//oculus.store://link/products?item_id=5269080709783454

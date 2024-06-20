@@ -5,13 +5,13 @@
         "originalPrice": 29.99,
         "code": "R90-96EE80",
         "image": "5269080709783454.webp",
-        "link": "https://www.meta.com/experiences/5269080709783454/"
+        "productId": "5269080709783454"
     },
     {
         "name": "Flight 74",
         "discount": 90,
         "code": "FLY90-C69323",
-        "link": "https://www.oculus.com/experiences/app/4939588089476517/?utm_source=oculus&utm_medium=share",
+        "productId": "4939588089476517",
         "originalPrice": 24.99,
         "image": "https://generated.vusercontent.net/placeholder.svg"
     },
@@ -19,7 +19,7 @@
         "name": "Zombieland Headshot Fever",
         "discount": 90,
         "code": "ZL90-D6423B",
-        "link": "https://www.oculus.com/experiences/app/2792447070854325/?utm_source=oculus&utm_medium=share",
+        "productId": "2792447070854325",
         "originalPrice": 19.99,
         "image": "https://generated.vusercontent.net/placeholder.svg"
     },
@@ -27,7 +27,7 @@
         "name": "Sushi Ben!",
         "discount": 90,
         "code": "SUSHI-BDE2EF",
-        "link": "https://www.oculus.com/experiences/app/5459391390744272/?utm_source=oculus&utm_medium=share",
+        "productId": "5459391390744272",
         "originalPrice": 24.99,
         "image": "https://generated.vusercontent.net/placeholder.svg"
     },
@@ -35,7 +35,7 @@
         "name": "MyFlowerReality",
         "discount": 50,
         "code": "FLOWERPOWER-E2AD2C",
-        "link": "https://www.oculus.com/experiences/app/7074660262660252/?utm_source=oculus&utm_medium=share",
+        "productId": "7074660262660252",
         "originalPrice": 12.99,
         "image": "https://generated.vusercontent.net/placeholder.svg"
     },
@@ -43,7 +43,7 @@
         "name": "Zero Glide",
         "discount": 50,
         "code": "AQUA-436B33",
-        "link": "https://www.oculus.com/experiences/app/24213276848270678/?utm_source=oculus&utm_medium=share",
+        "productId": "24213276848270678",
         "originalPrice": 12.99,
         "image": "https://generated.vusercontent.net/placeholder.svg"
     },
@@ -51,7 +51,7 @@
         "name": "Dance Dash",
         "discount": 50,
         "code": "WEFUNDER5-1CEC08",
-        "link": "https://www.oculus.com/experiences/app/6539528912840791/?utm_source=oculus&utm_medium=share",
+        "productId": "6539528912840791",
         "originalPrice": 19.99,
         "image": "https://generated.vusercontent.net/placeholder.svg"
     },
@@ -59,7 +59,7 @@
         "name": "Hide The Corpse",
         "discount": 50,
         "code": "HTCEA150-0835F9",
-        "link": "https://www.oculus.com/experiences/app/8714253315313680/?utm_source=oculus&utm_medium=share",
+        "productId": "8714253315313680",
         "originalPrice": 19.99,
         "image": "https://generated.vusercontent.net/placeholder.svg"
     },
@@ -67,7 +67,7 @@
         "name": "Programmer VR",
         "discount": 50,
         "code": "SUMMER-3B9F1A",
-        "link": "https://www.oculus.com/experiences/app/4987737161326497/?utm_source=oculus&utm_medium=share",
+        "productId": "4987737161326497",
         "originalPrice": 19.99,
         "image": "https://generated.vusercontent.net/placeholder.svg"
     },
@@ -75,7 +75,7 @@
         "name": "Tetris Effect: Connected",
         "discount": 40,
         "code": "TETRIS40-E1F685",
-        "link": "https://www.oculus.com/experiences/app/3386618894743567/?utm_source=oculus&utm_medium=share",
+        "productId": "3386618894743567",
         "originalPrice": 29.99,
         "image": "https://generated.vusercontent.net/placeholder.svg"
     },
@@ -83,7 +83,7 @@
         "name": "Grokit",
         "discount": 80,
         "code": "GROKIT-1FD314",
-        "link": "https://www.oculus.com/experiences/app/3388893331234972/?utm_source=oculus&utm_medium=share",
+        "productId": "3388893331234972",
         "originalPrice": 14.99,
         "image": "https://generated.vusercontent.net/placeholder.svg"
     }

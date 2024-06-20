@@ -2,11 +2,24 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Coupon } from "@/schemas/Coupon.schema";
 
 interface CouponComponentProps {
     coupons: Coupon[];
+}
+
+function isMobile() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return true;
+    }
+
+    // Detect Android
+    if (/android/i.test(userAgent)) {
+        return true;
+    }
+    return false;
 }
 
 export default function CouponComponent({ coupons }: CouponComponentProps) {
@@ -24,12 +37,17 @@ export default function CouponComponent({ coupons }: CouponComponentProps) {
         });
         setToasts([...toasts, toastId]);
     }
-    const handleCopyAndRedirect = async (code: string, url: string) => {
+    const handleCopyAndRedirect = async (code: string, productId: string) => {
+        let uri = `https://www.oculus.com/experiences/app/${productId}`;
+        if (isMobile()) {
+            uri = `oculus.store://link/products?item_id=${productId}`;
+        }
+
         await navigator.clipboard.writeText(code);
         toastCopy(true);
 
         await new Promise((resolve) => setTimeout(resolve, 1200));
-        window.location.href = url;
+        window.location.href = uri;
     };
 
     const manualCopy = async (code: string) => {
@@ -71,7 +89,8 @@ export default function CouponComponent({ coupons }: CouponComponentProps) {
                                         </p>
                                     </div>
                                     <div className="flex items-center justify-between">
-                                        <span className="font-bold text-lg bg-muted px-2 py-1 rounded-md flex items-center" onClick={() => manualCopy(coupon.code)} onTouchStart={() => manualCopy(coupon.code)}>
+                                        <span className="font-bold text-lg bg-muted px-2 py-1 rounded-md flex items-center"
+                                            onClick={() => manualCopy(coupon.code)} >
                                             {coupon.code}
                                             <CopyIcon className="w-4 h-4 ml-2" />
                                         </span>
@@ -80,8 +99,8 @@ export default function CouponComponent({ coupons }: CouponComponentProps) {
                                             variant="ghost"
                                             size="icon"
                                             className="text-muted-foreground hover:text-primary"
-                                            onClick={() => handleCopyAndRedirect(coupon.code, coupon.link)}
-                                            onTouchStart={() => handleCopyAndRedirect(coupon.code, coupon.link)}
+                                            onClick={() => handleCopyAndRedirect(coupon.code, coupon.productId)}
+                                        // onTouchStart={() => handleCopyAndRedirect(coupon.code, coupon.productId)}
                                         >
                                             <MetaIcon className="w-4 h-4" />
                                             <span className="sr-only">Add to cart</span>
