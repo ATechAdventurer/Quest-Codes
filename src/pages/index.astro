@@ -12,6 +12,20 @@ const coupons = CouponsSchema.parse(couponData);
   <head>
     <title>Coupon Codes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      type="text/partytown"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-RK7FFR0BL7"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-RK7FFR0BL7");
+    </script>
   </head>
   <body>
     <CouponComponent coupons={coupons} client:load />
