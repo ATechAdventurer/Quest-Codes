@@ -1,0 +1,22 @@
+name: Run Test on Coupons Change
+
+on:
+  pull_request:
+    paths:
+      - "src/data/coupons.json"
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20" # Use the version of Node.js you need
+
+      - name: Run test script
+        run: npx tsx src/scripts/test.ts
