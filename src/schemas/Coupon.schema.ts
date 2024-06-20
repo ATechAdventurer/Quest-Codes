@@ -12,5 +12,3 @@ export const CouponSchema = z.object({
 export const CouponsSchema = z.array(CouponSchema);
 
 export type Coupon = z.infer<typeof CouponSchema>;
-
-//oculus.store://link/products?item_id=5269080709783454
