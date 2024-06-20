@@ -10,16 +10,8 @@ interface CouponComponentProps {
 }
 
 function isMobile() {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        return true;
-    }
-
-    // Detect Android
-    if (/android/i.test(userAgent)) {
-        return true;
-    }
-    return false;
+    const userAgent = navigator.userAgent;
+    return /iPad|iPhone|iPod/.test(userAgent) || /android/i.test(userAgent);
 }
 
 export default function CouponComponent({ coupons }: CouponComponentProps) {
