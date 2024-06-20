@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20" # Use the version of Node.js you need
+          node-version: "20"
 
       - name: Run test script
         run: npx tsx src/scripts/test.ts
