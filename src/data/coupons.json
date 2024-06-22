@@ -56,15 +56,6 @@
         "image": "https://generated.vusercontent.net/placeholder.svg"
     },
     {
-        "name": "Tetris Effect: Connected",
-        "discount": 40,
-        "code": "TETRIS40-E1F685",
-        "productId": "3386618894743567",
-        "originalPrice": 29.99,
-        "image": "https://generated.vusercontent.net/placeholder.svg",
-        "validUntil": "2024-06-20"
-    },
-    {
         "name": "Grokit",
         "discount": 80,
         "code": "GROKIT-1FD314",
@@ -118,6 +109,22 @@
         "code": "CD2_90-598B98",
         "productId": "4687168774709280",
         "originalPrice": 24.99,
+        "image": "https://generated.vusercontent.net/placeholder.svg"
+    },
+    {
+        "name": "VAIL VR",
+        "discount": 69,
+        "code": "CITADEL1POINT2-885E84",
+        "productId": "6625826934127580",
+        "originalPrice": 29.99,
+        "image": "https://generated.vusercontent.net/placeholder.svg"
+    },
+    {
+        "name": "Block Buster",
+        "discount": 45,
+        "code": "BUSTER-95D1D1",
+        "productId": "4310142359062337",
+        "originalPrice": 19.99,
         "image": "https://generated.vusercontent.net/placeholder.svg"
     }
 ]
