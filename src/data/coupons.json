@@ -134,5 +134,13 @@
         "productId": "7368881886507513",
         "originalPrice": 9.99,
         "image": "https://generated.vusercontent.net/placeholder.svg"
+    },
+    {
+        "name": "Aqua Glide",
+        "discount": 50,
+        "code": "GLIDE-436B33",
+        "productId": "7421495714579740",
+        "originalPrice": 15.99,
+        "image": "https://generated.vusercontent.net/placeholder.svg"
     }
 ]
