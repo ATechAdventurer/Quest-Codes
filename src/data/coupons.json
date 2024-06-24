@@ -126,5 +126,13 @@
         "productId": "4310142359062337",
         "originalPrice": 19.99,
         "image": "https://generated.vusercontent.net/placeholder.svg"
+    },
+    {
+        "name": "WORDOMI",
+        "discount": 90,
+        "code": "WORD90-4A62D5",
+        "productId": "7368881886507513",
+        "originalPrice": 9.99,
+        "image": "https://generated.vusercontent.net/placeholder.svg"
     }
 ]
