@@ -56,14 +56,6 @@
         "image": "https://generated.vusercontent.net/placeholder.svg"
     },
     {
-        "name": "Grokit",
-        "discount": 80,
-        "code": "GROKIT-1FD314",
-        "productId": "3388893331234972",
-        "originalPrice": 14.99,
-        "image": "https://generated.vusercontent.net/placeholder.svg"
-    },
-    {
         "name": "Death Horizon: Reloaded",
         "discount": 90,
         "code": "DH90-1F2B90",
@@ -141,6 +133,22 @@
         "code": "GLIDE-436B33",
         "productId": "7421495714579740",
         "originalPrice": 15.99,
+        "image": "https://generated.vusercontent.net/placeholder.svg"
+    },
+    {
+        "name": "Arcaxer",
+        "discount": 90,
+        "code": "ARCAXER2-B9BB03",
+        "productId": "5396412860376470",
+        "originalPrice": 24.99,
+        "image": "https://generated.vusercontent.net/placeholder.svg"
+    },
+    {
+        "name": "Operation Serpens",
+        "discount": 90,
+        "code": "OPERATIONSERPENS90-598B98",
+        "productId": "5748603085165962",
+        "originalPrice": 19.99,
         "image": "https://generated.vusercontent.net/placeholder.svg"
     }
 ]
