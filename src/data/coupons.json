@@ -150,5 +150,45 @@
         "productId": "5748603085165962",
         "originalPrice": 19.99,
         "image": "https://generated.vusercontent.net/placeholder.svg"
+    },
+    {
+        "name": "Avicii Invector",
+        "discount": 80,
+        "code": "A80-57493E",
+        "productId": "4048766301899067",
+        "originalPrice": 29.99,
+        "image": "https://generated.vusercontent.net/placeholder.svg"
+    },
+    {
+        "name": "Smash Drums",
+        "discount": 50,
+        "code": "UVR-7996F4",
+        "productId": "3630025217090808",
+        "originalPrice": 13.99,
+        "image": "https://generated.vusercontent.net/placeholder.svg"
+    },
+    {
+        "name": "VR Pigeons",
+        "discount": 90,
+        "code": "VRPIGEONSAREGO-598B98",
+        "productId": "3957512337647287",
+        "originalPrice": 3.99,
+        "image": "https://generated.vusercontent.net/placeholder.svg"
+    },
+    {
+        "name": "Fractured Room",
+        "discount": 50,
+        "code": "SUMMER50-45EF48",
+        "productId": "5916424831767733",
+        "originalPrice": 4.99,
+        "image": "https://generated.vusercontent.net/placeholder.svg"
+    },
+    {
+        "name": "Dragon Fist VR Kung Fu",
+        "discount": 90,
+        "code": "DFVR90-602323",
+        "productId": "5075285115918784",
+        "originalPrice": 19.99,
+        "image": "https://generated.vusercontent.net/placeholder.svg"
     }
 ]
