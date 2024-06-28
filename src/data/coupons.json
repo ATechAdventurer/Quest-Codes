@@ -40,14 +40,6 @@
         "image": "https://generated.vusercontent.net/placeholder.svg"
     },
     {
-        "name": "Hide The Corpse",
-        "discount": 50,
-        "code": "HTCEA150-0835F9",
-        "productId": "8714253315313680",
-        "originalPrice": 19.99,
-        "image": "https://generated.vusercontent.net/placeholder.svg"
-    },
-    {
         "name": "Programmer VR",
         "discount": 50,
         "code": "SUMMER-3B9F1A",
@@ -189,6 +181,22 @@
         "code": "DFVR90-602323",
         "productId": "5075285115918784",
         "originalPrice": 19.99,
+        "image": "https://generated.vusercontent.net/placeholder.svg"
+    },
+    {
+        "name": "Lofi Katana",
+        "discount": 90,
+        "code": "LOFIKATANA90-598B98",
+        "productId": "6640896199298377",
+        "originalPrice": 16.99,
+        "image": "https://generated.vusercontent.net/placeholder.svg"
+    },
+    {
+        "name": "Colorball",
+        "discount": 90,
+        "code": "90-C43912",
+        "productId": "3603775183069078",
+        "originalPrice": 4.99,
         "image": "https://generated.vusercontent.net/placeholder.svg"
     }
 ]
