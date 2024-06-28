@@ -8,14 +8,6 @@
         "image": "https://generated.vusercontent.net/placeholder.svg"
     },
     {
-        "name": "Sushi Ben!",
-        "discount": 90,
-        "code": "SUSHI-BDE2EF",
-        "productId": "5459391390744272",
-        "originalPrice": 24.99,
-        "image": "https://generated.vusercontent.net/placeholder.svg"
-    },
-    {
         "name": "MyFlowerReality",
         "discount": 50,
         "code": "FLOWERPOWER-E2AD2C",
@@ -69,14 +61,6 @@
         "code": "CKF90-4A62D5",
         "productId": "3846153838783795",
         "originalPrice": 9.99,
-        "image": "https://generated.vusercontent.net/placeholder.svg"
-    },
-    {
-        "name": "Stilt",
-        "discount": 90,
-        "code": "STILT90-598B98",
-        "productId": "5632444056884139",
-        "originalPrice": 19.99,
         "image": "https://generated.vusercontent.net/placeholder.svg"
     },
     {
@@ -141,22 +125,6 @@
         "code": "OPERATIONSERPENS90-598B98",
         "productId": "5748603085165962",
         "originalPrice": 19.99,
-        "image": "https://generated.vusercontent.net/placeholder.svg"
-    },
-    {
-        "name": "Avicii Invector",
-        "discount": 80,
-        "code": "A80-57493E",
-        "productId": "4048766301899067",
-        "originalPrice": 29.99,
-        "image": "https://generated.vusercontent.net/placeholder.svg"
-    },
-    {
-        "name": "Smash Drums",
-        "discount": 50,
-        "code": "UVR-7996F4",
-        "productId": "3630025217090808",
-        "originalPrice": 13.99,
         "image": "https://generated.vusercontent.net/placeholder.svg"
     },
     {
