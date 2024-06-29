@@ -166,5 +166,13 @@
         "productId": "3603775183069078",
         "originalPrice": 4.99,
         "image": "https://generated.vusercontent.net/placeholder.svg"
+    },
+    {
+        "name": "Chess Club",
+        "discount": 90,
+        "code": "CHESSCAKE3-F79CEE",
+        "productId": "5353996901307344",
+        "originalPrice": 14.99,
+        "image": "https://generated.vusercontent.net/placeholder.svg"
     }
 ]
