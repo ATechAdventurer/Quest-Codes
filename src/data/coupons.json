@@ -48,14 +48,6 @@
         "image": "https://generated.vusercontent.net/placeholder.svg"
     },
     {
-        "name": "Sky Climb",
-        "discount": 90,
-        "code": "SKYCLIMB90-851899",
-        "productId": "6439300372853604",
-        "originalPrice": 14.99,
-        "image": "https://generated.vusercontent.net/placeholder.svg"
-    },
-    {
         "name": "Crazy Kung Fu",
         "discount": 90,
         "code": "CKF90-4A62D5",
@@ -168,11 +160,27 @@
         "image": "https://generated.vusercontent.net/placeholder.svg"
     },
     {
-        "name": "Chess Club",
+        "name": "Coffin Rot Brewing Co."
         "discount": 90,
-        "code": "CHESSCAKE3-F79CEE",
-        "productId": "5353996901307344",
+        "code": "SAMTEST9-602323",
+        "productId": "4382898511826807",
+        "originalPrice": 4.99,
+        "image": ""
+    },
+    {
+        "name": "Bubbbles"
+        "discount": 90,
+        "code": "TESTER9-602323",
+        "productId": "5536084596429713",
+        "originalPrice": 4.99,
+        "image": ""
+    },
+    {
+        "name": "Runner"
+        "discount": 65,
+        "code": "AESTHETIC-B91A92",
+        "productId": "6501835653220720",
         "originalPrice": 14.99,
-        "image": "https://generated.vusercontent.net/placeholder.svg"
+        "image": ""
     }
 ]
